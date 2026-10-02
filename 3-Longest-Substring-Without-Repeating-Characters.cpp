@@ -1,5 +1,5 @@
 
-// solution 1: optimized soltion
+// solution 1: optimized solution
 int lengthOfLongestSubstring(string s) {
         int n = s.size(), i = 0, j = 0, res = 0;
 
