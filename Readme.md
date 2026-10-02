@@ -1,0 +1,1 @@
+This repository contains solutions to the Blind 75 DSA questions. For each question, only the required function is implemented, so you can easily copy the function and use it directly on coding platforms.
