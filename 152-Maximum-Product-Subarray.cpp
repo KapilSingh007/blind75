@@ -14,6 +14,7 @@ int maxProduct(vector<int>& nums) {
     }
 
 solution2: better solution
+int maxProduct(vector<int>& nums) {
 int n = nums.size(), res = nums[0], pre = 1, suf = 1;
         vector<int> prefix(n, 0), suffix(n, 0);
         for (int i = 0; i < n; i++) {
@@ -40,3 +41,28 @@ int n = nums.size(), res = nums[0], pre = 1, suf = 1;
             }
     }
         return res;
+}
+
+
+
+
+
+solution3: optimal solution
+
+int maxProduct(vector<int>& nums) {
+
+
+        int n = nums.size(),res = INT_MIN,pre = 1,suf =1;
+
+        for(int i=0;i<n;i++){
+            if(pre == 0) pre = 1;
+            if(suf == 0) suf =1;
+
+            pre = pre * nums[i];
+            suf = suf * nums[n-1-i];
+
+            res = max({res,pre,suf});
+
+        }
+        return res;
+    }
